@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cUITe_002", "cUITe_002\cUITe_002.csproj", "{F339A21E-CE38-460B-B794-C21955A9C96A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A93A08A-982C-49B9-9058-67DDB1F162FC}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		ReadMe.txt = ReadMe.txt
+		run.runsettings = run.runsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs-sql-02.superoffice.no/crm/crmcollection
+		SccProjectUniqueName0 = cUITe_002\\cUITe_002.csproj
+		SccProjectName0 = cUITe_002
+		SccLocalPath0 = cUITe_002
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F339A21E-CE38-460B-B794-C21955A9C96A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F339A21E-CE38-460B-B794-C21955A9C96A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F339A21E-CE38-460B-B794-C21955A9C96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F339A21E-CE38-460B-B794-C21955A9C96A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
