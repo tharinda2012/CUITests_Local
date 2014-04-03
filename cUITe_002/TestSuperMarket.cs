@@ -58,8 +58,8 @@ namespace cUITe_002
                 {
                     Assert.Fail("Login failed. Incorrect username or password...");
                     Image pic = this.SOpage.CaptureImage();
-                    pic.Save("C:\\Users\\tharindal\\SkyDrive\\CodedUI_Projects\\Test\\cUITe\\cUITe_002\\cUITe_002\\TestResults\\screenshots\\file.bmp");
-                    TestContext.AddResultFile("C:\\Users\\tharindal\\SkyDrive\\CodedUI_Projects\\Test\\cUITe\\cUITe_002\\cUITe_002\\TestResults\\screenshots\\file.bmp");
+                    pic.Save("E:\\GitHub\\CUITests\\CUITests_Local\\screenshots\\file.bmp");
+                    TestContext.AddResultFile("E:\\GitHub\\CUITests\\CUITests_Local\\TestResults\\file.bmp");
                 }
 
                      
