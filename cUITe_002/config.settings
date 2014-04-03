@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="cUITe_002" GeneratedClassName="config">
+  <Profiles />
+  <Settings>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://qa-vm-supermarket/SuperMarket_sql2k5/default.aspx?contact.main?contact_id=946945</Value>
+    </Setting>
+    <Setting Name="SleepTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
