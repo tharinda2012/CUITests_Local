@@ -86,9 +86,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>config.settings</DependentUpon>
     </Compile>
-    <Compile Include="UITests\ManageCompany.cs" />
-    <Compile Include="Object_Repo\SuperOfficeUI.cs" />
+    <Compile Include="Object_Repo\SuperOfficeUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UITests\ManageCompany.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

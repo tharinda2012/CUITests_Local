@@ -9,7 +9,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
-using Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings;
 using Superoffice.Object_Repo;
 
 namespace Superoffice
@@ -18,52 +17,53 @@ namespace Superoffice
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class ManageCompany
+    public class TestSuperMarket
     {
-        [TestMethod]
-        public void CreateCompany()
+        public TestSuperMarket()
         {
-            //Select browser type
-            //BrowserWindow.CurrentBrowser = TestContext.DataRow["Browser"].ToString();
-            // BrowserWindow.CurrentBrowser = "firefox";
+        }
+        BrowserWindow SOpage;
+        
+        //[DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "C:\\Users\\tharindal\\SkyDrive\\CodedUI_Projects\\Test\\cUITe\\cUITe_002\\cUITe_002\\cUITe_002\\Resources\\Browsers.csv", "Browsers#csv", DataAccessMethod.Sequential), DeploymentItem("Browsers.csv")]
+       
 
-
-
-            SuperOfficeUI.browser = BrowserWindow.Launch(new Uri(config.Default.URL));  
+        [TestMethod]
+        
+        public void BuyNewProfLicense()
+        {
             
-            //Login with credentials 
-            SuperOfficeUI.Username.WaitForControlExist();
-            SuperOfficeUI.Username.Text = config.Default.username;
-            SuperOfficeUI.password.Text = config.Default.password;
-            Mouse.Click(SuperOfficeUI.login);
 
-            //Assert user lands Defauls.aspx page
+                //Select browser type
+               //BrowserWindow.CurrentBrowser = TestContext.DataRow["Browser"].ToString();
+              // BrowserWindow.CurrentBrowser = "firefox";
+              
+            //Launch SO web
+                SOpage = BrowserWindow.Launch(new Uri(config.Default.URL));
+                
 
-            try
-            {
-                SuperOfficeUI.lnkCompany.WaitForControlExist();
-                Assert.AreEqual("Company", SuperOfficeUI.lnkCompany.InnerText);
-            }
-            catch (Exception e)
-            {
+                //Login with credentials 
+                SuperOfficeUI.username(SOpage).WaitForControlExist();
+                SuperOfficeUI.username(SOpage).Text = config.Default.username;
+                SuperOfficeUI.password(SOpage).Text = config.Default.password;
+                Mouse.Click(SuperOfficeUI.login(SOpage));
+                
+                //Assert user lands Defauls.aspx page
 
-                Image pic = SuperOfficeUI.browser.CaptureImage();
-                pic.Save(config.Default.errordumppath);
-                TestContext.AddResultFile(config.Default.resultfilepath);
-                Assert.Fail("Login failed. Incorrect username or password..." + e);
-            }
-
-
-            //create a company
-
-            Mouse.Click(SuperOfficeUI.lnknewCompany);
-
-
-            SuperOfficeUI.countrylist.Text = "Sri Lanka";
-            Mouse.Click(SuperOfficeUI.lnknewCompany);
-            SuperOfficeUI.countrylist.SetFocus();
-
-
+                try
+                {
+                    SuperOfficeUI.lnkCompany(SOpage).WaitForControlExist();
+                    Assert.AreEqual("Company", SuperOfficeUI.lnkCompany(SOpage).InnerText);
+                }
+                catch (Exception e)
+                {
+                    Image pic = this.SOpage.CaptureImage();
+                    pic.Save(config.Default.errordumppath);
+                    TestContext.AddResultFile(config.Default.resultfilepath);
+                    Assert.Fail("Login failed. Incorrect username or password.....OR" + e);
+                }
+                            
+                
+                       
         }
 
         #region Additional test attributes
@@ -79,12 +79,14 @@ namespace Superoffice
         }
 
         ////Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //    SuperOfficeUI.browser.CloseOnPlaybackCleanup = false;
-        //    Console.WriteLine("UI Test ended at: " + DateTime.Now);
-        //}
+        [TestCleanup()]
+        public void MyTestCleanup()
+        {
+
+            SOpage.CloseOnPlaybackCleanup = true;
+          
+            Console.WriteLine("UI Test ended at: " + DateTime.Now);
+        }
 
         #endregion
 
