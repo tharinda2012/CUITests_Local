@@ -1,18 +1,27 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="cUITe_002" GeneratedClassName="config">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Superoffice" GeneratedClassName="config">
   <Profiles />
   <Settings>
-    <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">test</Value>
-    </Setting>
-    <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">test</Value>
-    </Setting>
-    <Setting Name="URL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://qa-vm-supermarket/SuperMarket_sql2k5/default.aspx?contact.main?contact_id=946945</Value>
-    </Setting>
     <Setting Name="SleepTime" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tl</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tl</Value>
+    </Setting>
+    <Setting Name="URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://172.20.4.246/web_rel_5150c</Value>
+    </Setting>
+    <Setting Name="errordumppath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\\GitHub\\CUITests\\CUITests_Local\\ErrorDumps\\error.png</Value>
+    </Setting>
+    <Setting Name="resultfilepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\\GitHub\\CUITests\\CUITests_Local\\TestResults\\file.bmp</Value>
+    </Setting>
+    <Setting Name="datasource" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -6,74 +6,91 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
 using Microsoft.VisualStudio.TestTools.UITesting;
 
-
-namespace cUITe_002.Object_Repo
+namespace Superoffice.Object_Repo
 {
     class SuperOfficeUI
     {
 
+        public static BrowserWindow browser { get; set; }
+  
         //retrieve username
-        public static HtmlEdit username(BrowserWindow browser)
+        public static HtmlEdit Username
         {
-            HtmlEdit txtusername = new HtmlEdit(browser);
-            txtusername.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0_LoginPlaceHolder_soLogin_UserName");
-            return txtusername;
+            get {
+                HtmlEdit txtusername = new HtmlEdit(browser);
+                txtusername.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0_LoginPlaceHolder_soLogin_UserName");
+                return txtusername;
+            }
         }
-
+          
+          
         //retrieve password
-        public static HtmlEdit password(BrowserWindow browser)
+        public static HtmlEdit password
         {
-
+            get{
             HtmlEdit txtpassword = new HtmlEdit(browser);
             txtpassword.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0_LoginPlaceHolder_soLogin_Password");
-            return txtpassword;   
+            return txtpassword;
+            }
         }
 
-        //login button
-        public static HtmlInputButton login(BrowserWindow browser)
-        {
 
+        //login button
+        public static HtmlInputButton login
+        {
+            get{
             HtmlInputButton btnLogin = new HtmlInputButton(browser);
             btnLogin.SearchProperties.Add(HtmlInputButton.PropertyNames.Id, "_ctl0_LoginPlaceHolder_soLogin_LoginBtn");
             return btnLogin;
+            }
         }
 
-        //company link in navigator panel
-        public static HtmlHyperlink lnkCompany(BrowserWindow browser)
+        //company Link in navigator panel
+        public static HtmlHyperlink lnkCompany
         {
+            get{
             HtmlHyperlink linkcompany=new HtmlHyperlink(browser);
             linkcompany.SearchProperties.Add(HtmlHyperlink.PropertyNames.Id,"contactButton_hyperlinkText");
             return linkcompany;
-
+            }
         }
 
 
-        //launch supermarekt
+        //Create Company Link
 
-
-        public static HtmlHyperlink lnkTools(BrowserWindow browser)
+        public static HtmlHyperlink lnknewCompany
         {
-            HtmlHyperlink linktools = new HtmlHyperlink(browser);
-            linktools.SearchProperties.Add(HtmlHyperlink.PropertyNames.Id,"toolboxButton_hyperlinkText");
-            return linktools;
-        }
+            get
+            {
+                HtmlHyperlink company = new HtmlHyperlink(browser);
+                company.SearchProperties.Add(HtmlHyperlink.PropertyNames.Id, "ToolBarNew_10_hyperlinkText");
+                return company;
 
+            }}
 
-        public static HtmlSpan spnsupermarket(BrowserWindow browser)
-        {
-            HtmlSpan spansupermarket = new HtmlSpan(browser);
-            spansupermarket.SearchProperties.Add(HtmlSpan.PropertyNames.InnerText,"SuperMarket (QA)");
-            spansupermarket.SearchProperties.Add(HtmlSpan.PropertyNames.Class,"name");
-            return spansupermarket;
-        }
+        //search and enter  country for company
+            public static HtmlEdit countrylist
+            {
+                get{
 
+                 HtmlEdit c_list = new HtmlEdit(browser);
+                c_list.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0__ctl0__Splitter_maingroup__ContactCountryMDO__ctl0__ctl0__Splitter_maingroup__ContactCountryMDO_SearchBox__ctl0__ctl0__Splitter_maingroup__ContactCountryMDO_SearchBox");
+                return c_list;
+                }
 
+            }
+
+            
+              
         // return company name in SO to be used in assert
-        public static HtmlEdit txtcompanyname(BrowserWindow browser)
+        public static HtmlEdit txtcompanyname
         {
-            HtmlEdit company = new HtmlEdit(browser);
-            company.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0_WebClientPlaceHolder__Splitter_MainHeaderGroup_MainHeading_textfield_MainHeaderGroup_MainHeading_textfield");
-            return company;
+            get
+            {
+                HtmlEdit company = new HtmlEdit(browser);
+                company.SearchProperties.Add(HtmlEdit.PropertyNames.Id, "_ctl0_WebClientPlaceHolder__Splitter_MainHeaderGroup_MainHeading_textfield_MainHeaderGroup_MainHeading_textfield");
+                return company;
+            }
         }
 
 
